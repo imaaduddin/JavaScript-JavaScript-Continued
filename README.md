@@ -1,0 +1,1 @@
+My JavaScript Notes, this is a continuation from this GitHub repo: https://github.com/imaaduddin/JavaScript-JavaScript

@@ -11,13 +11,13 @@
 //     f();
 // }
 
-function cry() {
-    console.log("I'm so sad :(");
-}
+// function cry() {
+//     console.log("I'm so sad :(");
+// }
 
-function rage() {
-    console.log("I'm mad!");
-}
+// function rage() {
+//     console.log("I'm mad!");
+// }
 
 // callThreeTimes(cry);
 
@@ -29,14 +29,39 @@ function rage() {
 
 // repeatNTimes(cry, 10);
 
-function pickOne(f1, f2) {
-    let rand = Math.random();
-    console.log(rand);
-    if (rand < 0.5) {
-        f1();
-    } else {
-        f2();
+// function pickOne(f1, f2) {
+//     let rand = Math.random();
+//     console.log(rand);
+//     if (rand < 0.5) {
+//         f1();
+//     } else {
+//         f2();
+//     }
+// }
+
+// pickOne(cry, rage);
+
+
+// Returning Functions 
+// function multiplyBy(num) {
+//     return function(x) {
+//         return x * num;
+//     }
+// }
+
+// const triple = multiplyBy(3);
+// triple(2); // will return 6
+
+function makeBetweenFunc(x, y) {
+    return function(num) {
+        if (num >= x && num <= y) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
 
-pickOne(cry, rage);
+const isChild = makeBetweenFunc(0, 13);
+console.log(isChild(7));
+

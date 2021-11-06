@@ -18,3 +18,7 @@ const square = x +> {
 const song = () => {
     return "For this life I cannot change";
 }
+
+const circle = (x) => {
+    return x - x;
+}

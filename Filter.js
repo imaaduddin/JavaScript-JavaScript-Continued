@@ -11,3 +11,7 @@ const odds = nums.filter(n => {
 
 const smallNums = nums.filter(n => n < 5);
 // [4, 3, 2, 1]
+
+const numbers = [45, 65, 76, 43, 13, 21, 98, 76, 85, 56];
+const result = numbers.filter(n => n % 2 === 1);
+console.log(result);

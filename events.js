@@ -8,3 +8,7 @@ const clicker = document.getElementById('#click');
 clicker.onclick = () => {
     console.log('You clicked me bruh!');
 };
+
+clicker.ondblclick = () => {
+    console.log('tap tap');
+}

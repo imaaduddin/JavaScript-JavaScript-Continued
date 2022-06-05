@@ -15,5 +15,5 @@ btn.addEventListener('click', () => {
 });
 
 btn.addEventListener('mouseover', () => {
-    console.log('nice!');
+    btn.innerText = 'chill yo!';
 })

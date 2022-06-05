@@ -13,3 +13,7 @@ btn.addEventListener('click', () => {
 btn.addEventListener('click', () => {
     alert('click 2');
 });
+
+btn.addEventListener('mouseover', () => {
+    console.log('nice!');
+})

@@ -9,3 +9,22 @@ function isTouching(a, b) {
 		aRect.left > bRect.left + bRect.width
 	);
 }
+
+const avatar = document.querySelector('#player');
+
+window.addEventListener('keyup', (e) => {
+	if (e.key === 'ArrowDown' || e.key === 'Down') {
+		const currentTop = extractPos(avatar.style.top);
+		avatar.style.top = `${currentTop + 50}px`;
+	} else if (e.key === 'ArrowUp' || e.key === 'Up') {
+		const currentTop = extractPos(avatar.style.top);
+		avatar.style.top = `${currentTop - 50}px`;
+	}
+});
+
+const extractPos = (pos) => {
+	if (!pos) {
+		return 100;
+	}
+	return parseInt(pos.slice(0, -2));
+}

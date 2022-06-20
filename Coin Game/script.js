@@ -11,6 +11,7 @@ function isTouching(a, b) {
 }
 
 const avatar = document.querySelector('#player');
+const coin = document.querySelector('#coin');
 
 window.addEventListener('keyup', (e) => {
 	if (e.key === 'ArrowDown' || e.key === 'Down') {
@@ -19,6 +20,14 @@ window.addEventListener('keyup', (e) => {
 	} else if (e.key === 'ArrowUp' || e.key === 'Up') {
 		const currentTop = extractPos(avatar.style.top);
 		avatar.style.top = `${currentTop - 50}px`;
+	} else if (e.key === 'ArrowRight' || e.key === 'Right') {
+		const currentLeft = extractPos(avatar.style.left);
+		avatar.style.left = `${currentLeft + 50}px`;
+		avatar.style.transform = 'scale(1,1)';
+	} else if (e.key === 'ArrowLeft' || e.key === 'Left') {
+		const currentLeft = extractPos(avatar.style.left);
+		avatar.style.left = `${currentLeft - 50}px`;
+		avatar.style.transform = 'scale(-1,1)';
 	}
 });
 
@@ -28,3 +37,8 @@ const extractPos = (pos) => {
 	}
 	return parseInt(pos.slice(0, -2));
 }
+
+const moveCoin = () => {
+	const x = Math.floor(Math.random() * window.innerWidth);
+	const y = Math.floor(Math.random() * window.innerHeight)
+};

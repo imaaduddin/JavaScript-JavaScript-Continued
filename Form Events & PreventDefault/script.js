@@ -11,8 +11,27 @@ const gadgetSelect = document.querySelector('#gadget');
 //     e.preventDefault();
 // });
 
+// const formData = {};
+// creditCard.addEventListener('input', (e) => {
+//     console.log('CC Changed!!!', e);
+//     formData['cc'] = e.target.value;
+// });
+
+// gadgetSelect.addEventListener('input', (e) => {
+//     console.log('GADGET!', e);
+//     formData['gadget'] = e.target.value;
+// });
+
+// termsCheckbox.addEventListener('input', (e) => {
+//     console.log('CHECKBOX', e);
+//     formData['agreeToTerms'] = e.target.checked; 
+// });
+
+// a better way to write:
 const formData = {};
-creditCard.addEventListener('input', (e) => {
-    console.log('CC Changed!!!', e);
-    formData['cc'] = e.target.value;
-})
+for (let input of [creditCard, termsCheckbox, gadgetSelect]) {
+    input.addEventListener('input', ({target}) => {
+        const {name, type, value, checked} = target;
+        formData[name] = type === 'checkbox' ? checked : value;
+    });
+}

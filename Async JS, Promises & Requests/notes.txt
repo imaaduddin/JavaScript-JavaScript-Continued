@@ -1,0 +1,8 @@
+Notes:
+
+Call Stack - The mechanism the JS interpreter uses to keep track of its place in a script that calls multiple functions. How JS "knows" what a function is currently being run and what functions are called from eithin that function, etc.  
+
+How it works?
+- When a script calls a fucntion, the interpreter adds it to the call stack and then starts carrying out the function.
+- Any functions tht are called by that function are added to the call stack further up, and run where their calls are reached.
+- When the current function is finished, the interpeter takes it off the stack and resumes execution where it left off in the last code listing.

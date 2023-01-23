@@ -17,7 +17,7 @@ const getRantText = (phrase) => {
 }
 
 const makeRant = (phrase, el) => {
-    const h1 = document.getElement('h1');
+    const h1 = document.createElement('h1');
     h1.innerText = getRantText(phrase);
     el.appendChild(h1);
 }
